@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<p>Email <email mail-to="Support"></email></p>
+
+<cache enabled="true" expires-after="TimeSpan.FromSeconds(20)">
+	@DateTime.Now	
+</cache>
+
+@await Component.InvokeAsync("News")

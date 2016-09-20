@@ -1,0 +1,13 @@
+﻿@using System.Threading.Tasks
+@using Samples.Models
+@model List<StoryModel>
+
+<h2>What's New</h2>
+<ul>
+	@foreach (var story in Model)
+	{
+		<li>
+			<a href="@story.Url">@story.Title</a>
+		</li>
+	}
+</ul>
